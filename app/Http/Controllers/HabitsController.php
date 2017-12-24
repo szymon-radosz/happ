@@ -72,7 +72,8 @@ class HabitsController extends Controller
      */
     public function edit($id)
     {
-       
+        $single = Habit::find($id);
+        return view('habits.edit')->with('single', $single);
     }
 
     /**
@@ -84,7 +85,19 @@ class HabitsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name'=>'required',
+            'description'=>'required',
+            'difficulty'=>'required'
+        ]);
+
+        $habit->name = $request->input('name');
+        $habit->description = $request->input('description');
+        $habit->difficulty = $request->input('difficulty');
+        $habit->NumberOfCompleted = 0;
+        $habit->save();
+
+        return redirect('/habits')->with('success', 'Habit created');
     }
 
     /**
@@ -95,6 +108,9 @@ class HabitsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $single = Habit::find($id);
+        $single->delete();
+
+        return redirect('/habits')->with('success', 'Habit deleted');
     }
 }
