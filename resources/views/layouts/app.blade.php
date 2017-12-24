@@ -12,21 +12,9 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     </head>
     <body>
-
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">HabitApp</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/habits">Habits</a></li>
-                </ul>
-            </div>
-        </nav>
-
-
+        @include('inc.navbar')
         <div class="container">
+            @include('inc.messages')
             @yield('content')
         </div>
     </body>

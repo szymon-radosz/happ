@@ -25,7 +25,7 @@ class HabitsController extends Controller
      */
     public function create()
     {
-        //
+        return view('habits.create');
     }
 
     /**
@@ -36,7 +36,20 @@ class HabitsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name'=>'required',
+            'description'=>'required',
+            'difficulty'=>'required'
+        ]);
+
+        $habit = new Habit;
+        $habit->name = $request->input('name');
+        $habit->description = $request->input('description');
+        $habit->difficulty = $request->input('difficulty');
+        $habit->NumberOfCompleted = 0;
+        $habit->save();
+
+        return redirect('/habits')->with('success', 'Habit created');
     }
 
     /**
