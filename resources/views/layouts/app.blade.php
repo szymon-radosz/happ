@@ -20,6 +20,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="/about">About</a></li>
+                    <li><a href="/habits">Habits</a></li>
                 </ul>
             </div>
         </nav>

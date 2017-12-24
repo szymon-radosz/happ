@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Habit;
 
 class HabitsController extends Controller
 {
@@ -13,7 +14,8 @@ class HabitsController extends Controller
      */
     public function index()
     {
-        //
+        $habits = Habit::all();
+        return view('habits.index')->with('habits', $habits);
     }
 
     /**
@@ -45,7 +47,8 @@ class HabitsController extends Controller
      */
     public function show($id)
     {
-        //
+        $single = Habit::find($id);
+        return view('habits.show')->with('single', $single);
     }
 
     /**
@@ -56,7 +59,7 @@ class HabitsController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
