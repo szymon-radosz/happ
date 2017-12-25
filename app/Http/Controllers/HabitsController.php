@@ -47,6 +47,7 @@ class HabitsController extends Controller
         $habit->description = $request->input('description');
         $habit->difficulty = $request->input('difficulty');
         $habit->NumberOfCompleted = 0;
+        $habit->user_id = auth()->user()->id;
         $habit->save();
 
         return redirect('/habits')->with('success', 'Habit created');
@@ -91,6 +92,7 @@ class HabitsController extends Controller
             'difficulty'=>'required'
         ]);
 
+        $habit = Habit::find($id);
         $habit->name = $request->input('name');
         $habit->description = $request->input('description');
         $habit->difficulty = $request->input('difficulty');
