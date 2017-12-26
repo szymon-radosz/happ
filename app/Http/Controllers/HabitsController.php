@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Habit;
+use App\User;
+use DB;
+use App\Quotation;
 
 class HabitsController extends Controller
 {
@@ -14,7 +17,9 @@ class HabitsController extends Controller
      */
     public function index()
     {
-        $habits = Habit::all();
+       
+        $habits = DB::table('habits')->where('user_id', auth()->id())->get();
+
         return view('habits.index')->with('habits', $habits);
     }
 
