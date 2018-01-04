@@ -8350,3 +8350,69 @@ button.close {
   }
 }
 
+.container {
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100vw;
+}
+
+.container .row {
+  margin: 0;
+}
+
+.container .guestWelcome .col-sm-10 {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.container .guestWelcome .col-sm-10 #welcomeLogo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.container .guestWelcome .col-sm-10 h3 {
+  padding-bottom: 20px;
+}
+
+.container .guestWelcome .col-sm-10 h3 span {
+  color: #7272da;
+}
+
+.container .guestWelcome .col-sm-10 .login,
+.container .guestWelcome .col-sm-10 .register {
+  width: 100px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.container .habits .singleHabit {
+  border-bottom: 1px solid #d1d1d1;
+  padding-bottom: 20px;
+}
+
+.container .habits .singleHabit p span {
+  font-weight: 700;
+}
+
+.container .habits .singleHabit:last-child {
+  border: none;
+}
+
+.container .navbar-header {
+  padding-left: 15px;
+}
+
+.container nav.navbar.navbar-default {
+  border: none !important;
+}
+
+.container a {
+  color: #7272da;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: #5151a5;
+}
+

@@ -13,8 +13,14 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
+Route::get('habits/add-point', function(){
 
+    $user = Auth::user()->increment('points');
+
+    return redirect('/habits')->with('success', 'Habit created');
+    
+});
 Route::resource('habits', 'HabitsController');
 Auth::routes();
-
 Route::get('/dashboard', 'DashboardController@index');
+?>

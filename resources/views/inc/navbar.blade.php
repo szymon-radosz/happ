@@ -1,3 +1,7 @@
+@guest
+
+@else
+
 <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
@@ -25,11 +29,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @guest
-                            <li><a href="/about">About</a></li>
+                        
+                           <!-- <li><a href="/about">About</a></li>
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
+                            <li><a href="{{ route('register') }}">Register</a></li>-->
+                        
                             <li><a href="/habits">Habits</a></li>
                             <li><a href="/habits/create">Add new</a></li>
                             <li class="dropdown">
@@ -53,8 +57,9 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endguest
+                        
                     </ul>
                 </div>
             </div>
         </nav>
+        @endguest

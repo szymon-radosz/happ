@@ -1,0 +1,68 @@
+.container{
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100vw;
+
+    .row{
+        margin:0;
+    }
+
+    .guestWelcome{
+
+        .col-sm-10{
+            text-align: center;
+            padding-top: 100px;
+
+            #welcomeLogo{
+                width: 200px;
+                margin: 0 auto;
+            }
+            h3{
+                padding-bottom: 20px;
+
+                span{
+                    color: rgb(114, 114, 218);
+                }
+            }
+            .login, .register{
+                width: 100px;
+                border-radius: 30px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .habits{
+        .singleHabit{
+            border-bottom: 1px solid #d1d1d1;
+            padding-bottom: 20px;
+
+            p{
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+        .singleHabit:last-child{
+            border: none;
+        }
+    }
+
+    .navbar-header{
+        padding-left: 15px;
+    }
+
+    nav.navbar.navbar-default{
+        border: none !important;
+    }
+
+    a{
+        color: rgb(114, 114, 218);
+    }
+
+    a:hover{
+        text-decoration: none;
+        color: rgb(81, 81, 165);
+    }
+}

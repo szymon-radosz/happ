@@ -10,6 +10,16 @@ use App\Quotation;
 
 class HabitsController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +27,7 @@ class HabitsController extends Controller
      */
     public function index()
     {
-       
+       //store in $habits all posts of current user 
         $habits = DB::table('habits')->where('user_id', auth()->id())->get();
 
         return view('habits.index')->with('habits', $habits);
@@ -67,6 +77,7 @@ class HabitsController extends Controller
     public function show($id)
     {
         $single = Habit::find($id);
+
         return view('habits.show')->with('single', $single);
     }
 
@@ -120,4 +131,5 @@ class HabitsController extends Controller
 
         return redirect('/habits')->with('success', 'Habit deleted');
     }
+
 }
