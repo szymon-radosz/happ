@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Habit;
 use App\User;
 use DB;
+use Auth;
 use App\Quotation;
 
 class HabitsController extends Controller
@@ -130,6 +131,14 @@ class HabitsController extends Controller
         $single->delete();
 
         return redirect('/habits')->with('success', 'Habit deleted');
+    }
+
+    /*method to add points to user */
+    public function addPoint(){
+        /*find logged user and increment column points*/
+        $user = Auth::user()->increment('points');
+
+        return redirect('/habits')->with('success', 'Habit created');
     }
 
 }
