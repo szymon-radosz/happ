@@ -14,11 +14,9 @@
             {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
         {!!Form::close()!!}
 
-   
-        <a href="http://127.0.0.1:8000/habits/add-point">ADD </a>
-       
-        
-
+        <div class="btn btn-default addBtn">
+            <a href="http://127.0.0.1:8000/habits/add-point">ADD </a>
+        </div>
     </div>
 </div>
 @endsection

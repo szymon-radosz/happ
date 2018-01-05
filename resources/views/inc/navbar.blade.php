@@ -36,6 +36,7 @@
                         
                             <li><a href="/habits">Habits</a></li>
                             <li><a href="/habits/create">Add new</a></li>
+                            <li><a href="/rank">Ranking</a></li>
                             <li class="dropdown">
                                 
 
