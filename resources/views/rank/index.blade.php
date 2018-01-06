@@ -6,6 +6,10 @@
 
     @php ($i = 1)
 
+    @php ($level = 1)
+
+    
+
     <table class="table">
             <thead>
                 <tr>
@@ -19,12 +23,43 @@
 
     @if(count($allUsers) > 1)
         @foreach($allUsers as $user)
-            
+
+        <?php
+            switch($user->points) {
+                case ($user->points < 3):
+                    $level = 1;
+                    break;
+                case ($user->points > 3) && ($user->points < 10):
+                    $level = 2;
+                    break;
+                case ($user->points > 10) && ($user->points < 20):
+                    $level = 3;
+                    break;
+                case ($user->points > 20) && ($user->points < 35):
+                    $level = 4;
+                    break;
+                 case ($user->points > 35) && ($user->points < 55):
+                    $level = 5;
+                    break;
+                case ($user->points > 55) && ($user->points < 85):
+                    $level = 6;
+                    break;
+                case ($user->points > 85) && ($user->points < 130):
+                    $level = 7;
+                    break;
+                case ($user->points > 130):
+                    $level = 8;
+                    break;
+                default:
+                    $level = 1;
+            }
+        ?>
+       
             <tr>
             <th scope="row">{{$i}}</th>
             <td>{{$user->name}}</td>
             <td>{{$user->points}}</td>
-            <td>{{$user->level}}</td>
+            <td>{{$level}}</td>
             </tr>
 
             @php ($i++)
