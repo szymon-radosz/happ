@@ -14,7 +14,7 @@
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/rank', 'RankController@index');
-Route::get('habits/add-point', 'HabitsController@addPoint');
+Route::get('habits/add-point/{id}', 'HabitsController@addPoint');
 Route::resource('habits', 'HabitsController');
 Auth::routes();
 Route::get('/dashboard', 'DashboardController@index');

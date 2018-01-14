@@ -3,6 +3,8 @@
 @section('content')
 <div class="row edit">
     <div class="col-sm-8 col-sm-offset-2">
+        <h2>Edit</h2>
+
         {!! Form::open(['action' => ['HabitsController@update', $single->id], 'method' => 'POST']) !!}
 
             <div class="form-group">
@@ -20,7 +22,7 @@
                 {{ Form::select('difficulty', array('easy'=>'Easy', 'normal'=>'Normal', 'hard'=>'Hard'), null, array('class'=>'form-control')) }}
             </div> 
             {{ Form::hidden('_method', 'PUT') }}
-            {{ Form::submit('Submit', ['class' => 'btn btn-default']) }}
+            {{ Form::submit('Submit', ['class' => 'btn btn-default editHabitBtn']) }}
 
         {!! Form::close() !!}
     </div>

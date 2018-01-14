@@ -134,11 +134,13 @@ class HabitsController extends Controller
     }
 
     /*method to add points to user */
-    public function addPoint(){
+    public function addPoint($id){
         /*find logged user and increment column points*/
         $user = Auth::user()->increment('points');
 
-        return redirect('/habits')->with('success', 'Habit created');
+        $task = DB::table('habits')->where('id', '=', $id)->increment('NumberOfCompleted');
+
+        return redirect('/habits')->with('success', 'Habit created', 'id', $id);
     }
 
 }

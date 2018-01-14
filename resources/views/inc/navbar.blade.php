@@ -1,5 +1,6 @@
 @guest
-
+ 
+      
 @else
 
 <nav class="navbar navbar-default">
@@ -15,7 +16,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/habits') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>

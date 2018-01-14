@@ -3,6 +3,9 @@
 @section('content')
 <div class="row createHabit">
     <div class="col-sm-6 col-sm-offset-3">
+
+        <h2>Create new habit</h2>
+        
         {!! Form::open(['action' => 'HabitsController@store', 'method' => 'POST']) !!}
 
             <div class="form-group">
@@ -19,7 +22,7 @@
                 {{ Form::label('difficulty', 'Difficulty') }}
                 {{ Form::select('difficulty', array('easy'=>'Easy', 'normal'=>'Normal', 'hard'=>'Hard'), null, array('class'=>'form-control')) }}
             </div> 
-            {{ Form::submit('Submit', ['class' => 'btn btn-default']) }}
+            {{ Form::submit('Submit', ['class' => 'btn btn-default newHabitBtn']) }}
 
         {!! Form::close() !!}
     </div>

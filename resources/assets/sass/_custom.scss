@@ -1,43 +1,170 @@
+.navbar-default{
+    margin-bottom: 0;
+    
+    .navbar-header{
+        .navbar-brand{
+            padding-left: 30px;
+        }
+    }
+    div#app-navbar-collapse{
+        background-color: #fff;
+    }
+}
+
 .container{
-    padding: 0;
-    margin-right: 0;
+    font-family: 'Lato', sans-serif;
     margin-left: 0;
-    width: 100vw;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
 
     .row{
         margin:0;
     }
 
+    .auth{
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+
+        #login, #register{
+            display: inline-block;
+            color: #fff;
+        }
+        #register{
+            margin: 30px;
+            padding: 10px 30px;
+            border-radius: 40px;
+            border: 2px solid #fff;
+            background-color: #8aace4;    
+        }
+        #register:hover{
+            color: #8AACE4;
+            border: 2px solid #fff;
+            background-color: #fff;
+        }
+    }
+
     .guestWelcome{
+        height: 100vh;
+        margin: 0 !important;
+        background: url('/images/bg3.png') no-repeat;
+        color: rgb(34, 34, 34);
+        display: flex;
+        align-items: center;
+       
 
-        .col-sm-10{
+        .header{
             text-align: center;
-            padding-top: 100px;
+            color: #fff;
 
-            #welcomeLogo{
-                width: 200px;
-                margin: 0 auto;
+            h1{
+                font-size: 70px;
             }
             h3{
-                padding-bottom: 20px;
-
-                span{
-                    color: rgb(114, 114, 218);
-                }
-            }
-            .login, .register{
-                width: 100px;
-                border-radius: 30px;
-                margin: 0 10px;
+                font-size: 28px;
+                font-weight: 300;
             }
         }
     }
 
+    .whatIsIt{
+        padding: 100px 15vw;
+
+        h2{
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0;
+        }
+        .description{
+            display: flex;
+            align-items: center;
+            height: 150px;
+
+            p{
+                font-size: 28px;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .howItWorks{
+        padding: 100px 15vw;
+        
+        h2{
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0;
+        }
+        .workSection{
+            padding-bottom: 50px;
+
+            h2{
+                color: #8AACE4;
+            }
+            p{
+                font-size: 24px;
+                font-weight: 300;
+                padding-top: 20px;
+                padding-left: 30px;
+            }
+        }
+        
+    }
+
+    .footer{
+        text-align: center;
+        padding: 20px 0;
+        background-color: #efefef;
+    }
+
+    .login, .register, .resetEmail, .reset{
+
+        h2{
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .authFormBtn{
+            padding: 10px 30px;
+            border-radius: 40px;
+            color: #8aace4;
+            border: 2px solid #8aace4;
+            background-color: #fff; 
+            font-size: 20px; 
+        }
+        .authFormBtn:hover{
+            color: #fff;
+            border: 2px solid #8aace4;
+            background-color: #8aace4; 
+        }
+    }
+
     .habits{
+
+        #hOne{
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+        }
         .singleHabit{
             border-bottom: 1px solid #d1d1d1;
             padding-bottom: 20px;
 
+            h2{
+                
+                font-weight: 700;
+                a{
+                    color: #8aace4;
+                }
+            }
             p{
                 span{
                     font-weight: 700;
@@ -49,20 +176,325 @@
         }
     }
 
-    .navbar-header{
-        padding-left: 15px;
+    .single{
+        .showSingleHabit{
+           
+            .header{
+                margin: 50px 0;
+                a:hover{
+                    text-decoration: none;
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+                h2, .dropdown, #addBtn{
+                    display: inline-block;
+                }
+                button#dropdownMenuButton{
+                    margin: 0 20px 20px 20px;
+                    background-color: #fff;
+                    border: 2px solid #f4f4f4;
+                }
+                .dropdown-menu{
+                    padding:10px 20px;
+                }
+                .EditLink{
+                    margin: 10px 0 0 0;
+                    color: #333;
+                    
+                }
+                .EditLink:hover{
+                    color: #000;
+                }
+                #deleteBtn{
+                    border: none;
+                    background-color: #fff;
+                    padding: 0;
+                    margin: 10px 0;
+                    color: #bf7070;
+                }
+                #deleteBtn:hover{
+                    color: #b52323;
+                }
+                #addBtn{
+                    padding: 10px 30px;
+                    border-radius: 40px;
+                    color: #8aace4;
+                    border: 2px solid #8aace4;
+                    background-color: #fff; 
+                    font-size: 20px; 
+                    margin-top: 15px;
+                    float: right;
+                }
+                #addBtn:hover{
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                    
+                    border: 2px solid #8aace4;
+                    background-color: #8aace4; 
+                }
+            }
+
+            p{
+                font-size: 20px;
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
     }
 
-    nav.navbar.navbar-default{
-        border: none !important;
+    .createHabit{
+
+        h2{
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .newHabitBtn{
+            padding: 10px 30px;
+            border-radius: 40px;
+            color: #8aace4;
+            border: 2px solid #8aace4;
+            background-color: #fff; 
+            font-size: 20px; 
+        }
+        .newHabitBtn:hover{
+            color: #fff;
+            border: 2px solid #8aace4;
+            background-color: #8aace4; 
+        }
     }
 
-    a{
-        color: rgb(114, 114, 218);
+    .edit{
+        h2{
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .editHabitBtn{
+            padding: 10px 30px;
+            border-radius: 40px;
+            color: #8aace4;
+            border: 2px solid #8aace4;
+            background-color: #fff; 
+            font-size: 20px; 
+        }
+        .editHabitBtn:hover{
+            color: #fff;
+            border: 2px solid #8aace4;
+            background-color: #8aace4; 
+        }
     }
 
-    a:hover{
-        text-decoration: none;
-        color: rgb(81, 81, 165);
+    .rank{
+        .col-sm-8{
+            h2{
+                text-align: center;
+                padding: 50px;
+                margin: 0;
+                font-weight: 700;
+                font-size: 40px;
+            }
+            .table{
+                text-align: center;
+
+                th{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar-default{
+        background-color: #fff;
+
+        .navbar-header{
+            background-color: #fff;
+            max-width: 100vw;
+
+            button.navbar-toggle.collapsed, button.navbar-toggle{
+                margin-right: 0;
+            }
+            button.navbar-toggle, button.navbar-toggle:active, button.navbar-toggle:hover, button.navbar-toggle:visited{
+                background-color: #fff;
+            }
+        }
+        #app-navbar-collapse{
+            text-align: center;
+            width: 100%;
+            margin: 0;
+
+            ul.nav.navbar-nav:first-child{
+                display: none;
+            }
+            li a:active, li a:hover{
+                background-color: #fff;
+            }
+            .dropdown-menu{
+                text-align: center;
+            }
+        }
+    }
+    .container{
+        .auth{
+            text-align: center;
+            width: 100vw;
+
+            #register{
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+            }
+            #register:hover, #register:active{
+                background-color: #8aace4;
+                border: none;
+                color: #fff;
+            }
+            #login, #register{
+                padding: 30px;
+                width: 130px;
+            }
+        }
+        .guestWelcome{
+            background-position: 100% 90%;
+        }
+        .whatIsIt{
+            padding: 60px 15vw 0 15vw;
+
+            h2{
+                padding-bottom: 20px;
+            }
+        }
+
+        .howItWorks{
+            padding: 60px 15vw 0 15vw;
+
+            h2{
+                padding-bottom: 30px;
+            }
+            .workSection{
+                padding-bottom: 20px;
+
+                p{
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .habits{
+            text-align: center;
+        }
+
+        .single{
+            .showSingleHabit{
+               
+                .header{
+                    margin: 20px 0 50px 0;
+                    text-align: center;
+
+                    h2, .dropdown{
+                        display: inline-block;
+                    }
+                    #addBtn{
+                        width: 70vw;
+                        margin-right: 11vw;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .navbar-default{
+        background-color: #fff;
+
+        .navbar-header{
+            background-color: #fff;
+            max-width: 100vw;
+
+            button.navbar-toggle.collapsed, button.navbar-toggle{
+                margin-right: 0;
+            }
+            button.navbar-toggle, button.navbar-toggle:active, button.navbar-toggle:hover, button.navbar-toggle:visited{
+                background-color: #fff;
+            }
+        }
+        #app-navbar-collapse{
+            text-align: center;
+
+            ul.nav.navbar-nav:first-child{
+                display: none;
+            }
+            li a:active, li a:hover{
+                background-color: #fff;
+            }
+            .dropdown-menu{
+                text-align: center;
+            }
+        }
+    }
+
+    .container{
+        .auth{
+            text-align: center;
+            width: 100vw;
+
+            #register{
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+            }
+            #register:hover, #register:active{
+                background-color: #8aace4;
+                border: none;
+                color: #fff;
+            }
+            #login, #register{
+                padding: 30px;
+            }
+        }
+        .guestWelcome{
+            background-position: 100% 90%;
+        }
+        .whatIsIt{
+            padding: 60px 15vw 0 15vw;
+
+            h2{
+                padding-bottom: 20px;
+            }
+        }
+
+        .howItWorks{
+            padding: 60px 15vw 0 15vw;
+
+            h2{
+                padding-bottom: 30px;
+            }
+            .workSection{
+                padding-bottom: 20px;
+
+                p{
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .habits{
+            text-align: center;
+        }
     }
 }
