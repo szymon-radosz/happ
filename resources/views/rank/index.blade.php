@@ -7,7 +7,7 @@
 
         @php ($i = 1)
         @php ($level = 1)
-        
+
         <table class="table">
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
 
-        @if(count($allUsers) > 1)
+        @if(count($allUsers) >= 1)
             @foreach($allUsers as $user)
 
             <?php
@@ -52,7 +52,7 @@
                         $level = 1;
                 }
             ?>
-        
+
                 <tr>
                 <th scope="row">{{$i}}</th>
                 <td>{{$user->name}}</td>
@@ -61,7 +61,7 @@
                 </tr>
 
                 @php ($i++)
-                
+
             @endforeach
         @else
             <p>No Users </p>

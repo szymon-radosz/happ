@@ -28,8 +28,10 @@ class HabitsController extends Controller
      */
     public function index()
     {
-       //store in $habits all posts of current user 
+       //store in $habits all posts of current user
         $habits = DB::table('habits')->where('user_id', auth()->id())->get();
+
+        //dd($habits);
 
         return view('habits.index')->with('habits', $habits);
     }

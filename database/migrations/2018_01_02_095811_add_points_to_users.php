@@ -14,7 +14,7 @@ class AddPointsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function($table){
-            $table->integer('points');     
+            $table->integer('points')->default(0);     
         });
     }
 
@@ -26,7 +26,7 @@ class AddPointsToUsers extends Migration
     public function down()
     {
         Schema::table('users', function($table){
-            $table->dropColumn('points');     
+            $table->dropColumn('points');
         });
     }
 }
