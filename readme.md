@@ -10,7 +10,7 @@ config mysql database with .env file
 php artisan migrate
 php artisan serve
 ```
-##Running tests
+## Running tests
 
 ``` 
 ./vendor/bin/phpunit
