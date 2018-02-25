@@ -106,13 +106,12 @@ class HabitsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name'=>'required',
             'description'=>'required',
             'difficulty'=>'required'
         ]);
 
         $habit = Habit::find($id);
-        $habit->name = $request->input('name');
+        //$habit->name = $request->input('name');
         $habit->description = $request->input('description');
         $habit->difficulty = $request->input('difficulty');
         $habit->NumberOfCompleted = 0;
@@ -138,7 +137,16 @@ class HabitsController extends Controller
     /*method to add points to user */
     public function addPoint($id){
         /*find logged user and increment column points*/
-        $user = Auth::user()->increment('points');
+
+        $single = Habit::find($id);
+
+        if ($single->difficulty == 'hard') {
+            $user = Auth::user()->increment('points', 4);
+        }elseif($single->difficulty == 'normal'){
+            $user = Auth::user()->increment('points', 2);
+        }else{
+            $user = Auth::user()->increment('points', 1);
+        }
 
         $task = DB::table('habits')->where('id', '=', $id)->increment('NumberOfCompleted');
 

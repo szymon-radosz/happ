@@ -12,7 +12,7 @@
                 ...
             </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a href="/habits/{{$single->id}}/edit"><div class="dropdown-item EditLink">Edit</div></a>
+                    <!--<a href="/habits/{{$single->id}}/edit"><div class="dropdown-item EditLink">Edit</div></a>-->
                     {!!Form::open(['action' => ['HabitsController@destroy', $single->id], 'method' => 'POST'])!!}
                         {{Form::hidden('_method', 'DELETE')}}
                         {{Form::submit('Delete', ['id' => 'deleteBtn'])}}
@@ -22,7 +22,7 @@
 
             <a href="http://127.0.0.1:8000/habits/add-point/{{$single->id}}">
                 <div class="btn btn-default" id="addBtn">
-                    Completed Today!</a>
+                    Complete Today!</a>
                 </div>
             </a>
         </div>
@@ -30,8 +30,8 @@
         <p><span>Description: </span>{{$single->description}}</p>
         <p><span>Difficulty: </span>{{$single->difficulty}}</p>
         <p>You completed that task {{$single->NumberOfCompleted}} times</p>
-        
-        
+
+
     </div>
 </div>
 @endsection

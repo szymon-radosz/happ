@@ -7,10 +7,10 @@
 
         {!! Form::open(['action' => ['HabitsController@update', $single->id], 'method' => 'POST']) !!}
 
-            <div class="form-group">
+            <!--<div class="form-group">
                 {{ Form::label('name', 'Name') }}
                 {{ Form::text('name', $single->name, ['class' => 'form-control', 'placeholder' => 'Name']) }}
-            </div>
+            </div>-->
 
             <div class="form-group">
                 {{ Form::label('description', 'Description') }}
@@ -20,7 +20,7 @@
             <div class="form-group">
                 {{ Form::label('difficulty', 'Difficulty') }}
                 {{ Form::select('difficulty', array('easy'=>'Easy', 'normal'=>'Normal', 'hard'=>'Hard'), null, array('class'=>'form-control')) }}
-            </div> 
+            </div>
             {{ Form::hidden('_method', 'PUT') }}
             {{ Form::submit('Submit', ['class' => 'btn btn-default editHabitBtn']) }}
 
